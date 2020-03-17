@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="book-test" configfailurepolicy="continue" thread-count="2" time-out="7200000" verbose="1">
+    <test name="Default" parallel="methods" thread-count="5">
+        <packages>
+            <package name="com.heiio.book.*"/>
+        </packages>
+    </test>
+</suite>
