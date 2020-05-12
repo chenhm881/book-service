@@ -20,7 +20,7 @@ public class DefaultControllerTest {
 
     @Test
     public void testHelloWorld() {
-        when(defaultController.helloWorld()).thenReturn("Hello spring boot.");
+        when(defaultController.helloWorld()).thenReturn("Hello spring boot");
         Assert.assertTrue(defaultController.helloWorld() == "Hello spring boot");
     }
 
