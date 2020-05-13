@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.heiio</groupId>
-	<artifactId>book</artifactId>
+	<artifactId>book-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>	
+	<name>book</name>
+	<description>Neil Chen project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<testng.version>7.1.0</testng.version>
@@ -66,6 +66,29 @@
 			<version>${testng.version}</version>
 			<scope>test</scope>
 		</dependency>
+        <!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-spring-boot-starter -->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+            <version>5.0.2</version>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java-tools -->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java-tools</artifactId>
+            <version>5.2.4</version>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphiql-spring-boot-starter -->
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphiql-spring-boot-starter</artifactId>
+			<version>5.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.dropwizard.metrics</groupId>
+			<artifactId>metrics-annotation</artifactId>
+			<version>3.2.6</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -89,7 +112,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-					</suiteXmlFiles>                            
+					</suiteXmlFiles>
 				</configuration>
             </plugin>
 				<plugin>
@@ -110,7 +133,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>	
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>

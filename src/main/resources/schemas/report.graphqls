@@ -1,0 +1,4 @@
+type Report {
+	key : String
+	name : String
+}
