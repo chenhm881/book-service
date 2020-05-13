@@ -1,3 +1,3 @@
 type Query {
-  reportList : [Report]
+  reportList (key: String, name: String) : [Report]
 }

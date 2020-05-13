@@ -15,10 +15,10 @@ public class ReportQuery implements GraphQLQueryResolver {
      * query the report.
      * @return List
      */
-    public List<Report> reportList() {
+    public List<Report> reportList(String key, String name) {
         Report b = Report.builder()
-                .key("book")
-                .name("Python")
+                .key(key)
+                .name(name)
                 .build();
         List<Report> reportList = new ArrayList<>();
         reportList.add(b);
