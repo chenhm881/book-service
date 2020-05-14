@@ -1,5 +1,6 @@
 package com.heiio.book.model.report;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,8 +18,7 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @NoArgsConstructor(force = true)
 @Data
-public class Report {
-    private String key;
+public class Employee {
+    private Integer empno;
     private String name;
-    private Employee employee;
 }

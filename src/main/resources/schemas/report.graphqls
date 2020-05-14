@@ -1,4 +1,10 @@
 type Report {
 	key : String
 	name : String
+	employee: [Employee]
+}
+
+type Employee {
+	empno: Int
+	name: String
 }
