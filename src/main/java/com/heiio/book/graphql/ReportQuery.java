@@ -2,10 +2,8 @@ package com.heiio.book.graphql;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.heiio.book.model.report.Report;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.heiio.book.service.ReportBiz;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

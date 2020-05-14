@@ -2,18 +2,23 @@ package com.heiio.book.service;
 
 import com.heiio.book.model.report.Employee;
 import com.heiio.book.model.report.Report;
-import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import org.springframework.stereotype.Component;
+
+
 
 @Component
 public class ReportBiz {
-
-    public List<Report> getReportList (String key, String name) {
-
+    /**
+     * fetch the list of report.
+     * @param key report key
+     * @param name report name
+     * @return report list.
+     */
+    public List<Report> getReportList(String key, String name) {
         Employee employee = new Employee();
         employee.setEmpno(1);
         employee.setName("Jack");
@@ -32,7 +37,6 @@ public class ReportBiz {
                 return a.getEmpno().compareTo(b.getEmpno());
             }
         });
-
         return reportList;
     }
 
