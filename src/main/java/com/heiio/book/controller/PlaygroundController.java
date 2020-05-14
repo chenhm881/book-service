@@ -1,4 +1,4 @@
-package com.heiio.book;
+package com.heiio.book.controller;
 
 import static java.nio.charset.Charset.defaultCharset;
 
