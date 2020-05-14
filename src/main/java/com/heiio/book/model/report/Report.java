@@ -9,6 +9,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @AllArgsConstructor
 @EqualsAndHashCode
@@ -20,5 +22,5 @@ import lombok.Setter;
 public class Report {
     private String key;
     private String name;
-    private Employee employee;
+    private List<Employee> employees;
 }

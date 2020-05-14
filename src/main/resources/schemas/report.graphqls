@@ -1,7 +1,7 @@
 type Report {
 	key : String
 	name : String
-	employee: [Employee]
+	employees: [Employee]
 }
 
 type Employee {
