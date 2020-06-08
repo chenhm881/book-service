@@ -55,6 +55,6 @@ public class TestCollections {
     }
 
     public void comparingMethodSort(List<Employee> employees) {
-        Collections.sort(employees, Comparator.comparing(Employee::getEmpno));
+        Collections.sort(employees, Comparator.comparingInt(Employee::getEmpno));
     }
 }
