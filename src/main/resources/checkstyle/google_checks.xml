@@ -36,7 +36,7 @@
 
     <!-- Checks for whitespace                               -->
     <!-- See http://checkstyle.org/config_whitespace.html -->
-    <module name="FileTabCharacter">
+<!--    <module name="FileTabCharacter">
         <property name="eachLine" value="true"/>
     </module>
 
@@ -96,7 +96,7 @@
                     INSTANCE_INIT, ANNOTATION_DEF, ENUM_DEF"/>
         </module>
         <module name="SuppressionXpathSingleFilter">
-          <!-- suppresion is required till https://github.com/checkstyle/checkstyle/issues/7541 -->
+          &lt;!&ndash; suppresion is required till https://github.com/checkstyle/checkstyle/issues/7541 &ndash;&gt;
           <property name="id" value="RightCurlyAlone"/>
           <property name="query" value="//RCURLY[parent::SLIST[count(./*)=1]
                                                  or preceding-sibling::*[last()][self::LCURLY]]"/>
@@ -144,13 +144,13 @@
             <property name="option" value="EOL"/>
         </module>
         <module name="SeparatorWrap">
-            <!-- ELLIPSIS is EOL until https://github.com/google/styleguide/issues/258 -->
+            &lt;!&ndash; ELLIPSIS is EOL until https://github.com/google/styleguide/issues/258 &ndash;&gt;
             <property name="id" value="SeparatorWrapEllipsis"/>
             <property name="tokens" value="ELLIPSIS"/>
             <property name="option" value="EOL"/>
         </module>
         <module name="SeparatorWrap">
-            <!-- ARRAY_DECLARATOR is EOL until https://github.com/google/styleguide/issues/259 -->
+            &lt;!&ndash; ARRAY_DECLARATOR is EOL until https://github.com/google/styleguide/issues/259 &ndash;&gt;
             <property name="id" value="SeparatorWrapArrayDeclarator"/>
             <property name="tokens" value="ARRAY_DECLARATOR"/>
             <property name="option" value="EOL"/>
@@ -309,11 +309,11 @@
         <module name="CommentsIndentation">
             <property name="tokens" value="SINGLE_LINE_COMMENT, BLOCK_COMMENT_BEGIN"/>
         </module>
-        <!-- https://checkstyle.org/config_filters.html#SuppressionXpathFilter -->
+        &lt;!&ndash; https://checkstyle.org/config_filters.html#SuppressionXpathFilter &ndash;&gt;
         <module name="SuppressionXpathFilter">
             <property name="file" value="${org.checkstyle.google.suppressionxpathfilter.config}"
                       default="checkstyle-xpath-suppressions.xml" />
             <property name="optional" value="true"/>
         </module>
-    </module>
+    </module>-->
 </module>
