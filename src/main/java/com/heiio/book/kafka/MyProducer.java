@@ -10,26 +10,26 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class MyProducer {
-    @Autowired
-    private KafkaTemplate kafkaTemplate;
+//    @Autowired
+//    private KafkaTemplate kafkaTemplate;
+//
+//    @Transactional(rollbackFor = RuntimeException.class)
+//    public String getProducer(String message) {
+//
+//        //Producer<String, String> producer = new KafkaProducer<String, String>(props);
+//
+//
+//        kafkaTemplate.executeInTransaction( t -> {
+//           t.send("test", "message");
+//           return true;
+//        });
+//        return "success";
+//    }
 
-    @Transactional(rollbackFor = RuntimeException.class)
-    public String getProducer(String message) {
 
-        //Producer<String, String> producer = new KafkaProducer<String, String>(props);
-
-
-        kafkaTemplate.executeInTransaction( t -> {
-           t.send("test", "message");
-           return true;
-        });
-        return "success";
-    }
-
-
-    @KafkaListener(id = "", topics = "test", groupId = "test.demo")
-    public String getConsumer(String input) {
-        System.out.println(input);
-        return input;
-    }
+//    @KafkaListener(id = "", topics = "test", groupId = "test.demo")
+//    public String getConsumer(String input) {
+//        System.out.println(input);
+//        return input;
+//    }
 }

@@ -1,6 +1,5 @@
 package com.heiio.book.controller;
 
-import com.heiio.book.caching.MyRedis;
 import com.heiio.book.caching.StoreTicket;
 import com.heiio.book.caching.TicketModel;
 import com.heiio.book.kafka.MyProducer;
@@ -15,8 +14,8 @@ import java.util.Map;
 
 @Controller
 public class DefaultController {
-    @Autowired
-    private MyRedis myRedis;
+//    @Autowired
+//    private MyRedis myRedis;
 
     @Autowired
     private StoreTicket ticket;
@@ -53,12 +52,12 @@ public class DefaultController {
         return "list";
     }
 
-    @RequestMapping("/myRedis")
-    @ResponseBody
-    public String myRedis() {
-         myRedis.setRedisValue();
-         return "";
-    }
+//    @RequestMapping("/myRedis")
+//    @ResponseBody
+//    public String myRedis() {
+//         myRedis.setRedisValue();
+//         return "";
+//    }
 
     @RequestMapping("/store")
     @ResponseBody
@@ -67,11 +66,11 @@ public class DefaultController {
         return model.getSponsor();
     }
 
-    @RequestMapping("/pkafka/{message}")
-    @ResponseBody
-    public String producerKafka(@PathVariable String message) {
-       return producer.getProducer(message);
-    }
+//    @RequestMapping("/pkafka/{message}")
+//    @ResponseBody
+//    public String producerKafka(@PathVariable String message) {
+//       return producer.getProducer(message);
+//    }
 }
 
 
