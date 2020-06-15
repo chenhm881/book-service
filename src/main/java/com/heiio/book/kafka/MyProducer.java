@@ -1,5 +1,7 @@
 package com.heiio.book.kafka;
 
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -13,6 +15,10 @@ public class MyProducer {
 
     @Transactional(rollbackFor = RuntimeException.class)
     public String getProducer(String message) {
+
+        //Producer<String, String> producer = new KafkaProducer<String, String>(props);
+
+
         kafkaTemplate.executeInTransaction( t -> {
            t.send("test", "message");
            return true;
