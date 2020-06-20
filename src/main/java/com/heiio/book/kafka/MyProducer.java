@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class MyProducer {
 //    @Autowired
 //    private KafkaTemplate kafkaTemplate;
-//
+
 //    @Transactional(rollbackFor = RuntimeException.class)
 //    public String getProducer(String message) {
 //
